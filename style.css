@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #070F2B;
+    color: #fff;
+}
+
+nav {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+nav h1 {
+    color: white;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* main section */
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: white;
+    position: relative;
+}
+
+.container{
+    width: 800px;
+    height: 190px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgb(235, 0, 250, 0.11);
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(25px);
+}
+
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    border-radius: 5px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: -1;
+}
+
+.container::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    z-index: -1;
+}
+
+.clock span{
+    font-size: 81px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after{
+    content: '';
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after{
+    content: 'HOURS';
+}
+
+#min::after{
+    content: 'MINUTES';
+}
+
+#sec::after{
+    content: 'SECONDS';
+}
+
+#ampm{
+    font-size: 50px;
+}
+
+/* toggle switch section */
+button{
+    height: 50px;
+    width: 120px;
+    border-radius: 25px;
+    margin: 30px 346px;
+    background: #2575fc;
+    font-weight: 800;
+    color: #fff;
+}
+
+
